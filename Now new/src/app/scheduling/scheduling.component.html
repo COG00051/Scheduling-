@@ -1,0 +1,1133 @@
+<section class="content page-calendar">
+  <div class="block-header">
+    <div class="row">
+      <div class="col-lg-7 col-md-6 col-sm-12">
+        <h2 class="title-sked">
+          {{ title }}
+        </h2>
+      </div>
+    </div>
+  </div><!-- block header end -->
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header bg-light">
+                <div class="container">
+                    <div class="row">
+                      <!-- <div class="col-sm">
+                          <button class="btn btn-default btn-simple btn-round waves-effect" id="change-view-week">Week</button>
+                          <button class="btn btn-default btn-simple btn-round waves-effect" id="change-view-month">Month</button>
+                          <button class="btn btn-default btn-simple btn-round waves-effect" id="change-view-cutoff">Cut Off</button>
+                          <div class="timezone font-weight-bold">Asia/Manila</div>
+                      </div> -->
+                 <div align="left">
+                  <ul class="nav nav-tabs" style="padding:0!important;">
+                    <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#week-table">Week</a></li>
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#month-table">Month</a></li>
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#month-table">Cut Off</a></li>  
+                </ul>
+                 </div>
+                      <div class="col-sm">
+                          <div class="col-lg-12 col-sm-12" style="text-align: center; margin-top: 15px;">
+                              <div class="col-3" style="display: inline-block;"><div><div style="height: 15px; width: 15px; background-color: #61CED1; border-radius: 5%;"></div><span class="absolute_position" style="display: inline-block; font-weight: bold; color: #676767; font-size: 10px;">Shift</span></div></div>
+                              <div class="col-3" style="display: inline-block;"><div><div style="height: 15px; width: 15px; background-color: #FFB235; border-radius: 5%;"></div><span class="absolute_position" style="display: inline-block; font-weight: bold; color: #676767; font-size: 10px;">On Leave</span></div></div>
+                              <div class="col-3" style="display: inline-block;"><div><div style="height: 15px; width: 15px; background-color: #DC5682; border-radius: 5%;"></div><span class="absolute_position" style="display: inline-block; font-weight: bold; color: #676767; font-size: 10px;">Holiday</span></div></div>
+                              <div class="col-3" style="display: inline-block;"><div><div style="height: 15px; width: 15px; background-color: #DDE5EA; border-radius: 5%;"></div><span class="absolute_position" style="display: inline-block; font-weight: bold; color: #676767; font-size: 10px;">Rest Day</span></div></div>
+                          </div>
+                      </div>
+                    <!--end of schedule legend menu-->
+                    <button class="btn btn-default btn-simple btn-round waves-effect" id="event">Events</button>
+                      <!--end of dropdown event menu-->
+                    </div>
+                </div>
+            </div>
+  <div class="body">
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane in active" id="week-table"> 
+            <div class="row">
+                <div class="col-lg-12" >
+                  <div class="card">
+                      <div class="header" id="weekly-header" style="background-color: #5D9CC7; height:70px; padding-top:15px;" >
+                          <div class="row">
+                              <div class="col-lg-3 col-md-3">
+                                <div class="form-group">                                   
+                                    <input id="input-week" onkeyup="myFilter()" type="text" class="form-control" placeholder="Search Name.." style="background-color:#fff;">        
+                                </div>
+                                
+                               </div>
+                               <div class="col-lg-6 col-md-6">
+                                  <h1 style="font-weight:bold;font-size:20px;margin-top:10px; text-align:center; padding-bottom:5px;color:white;margin-left:-10px;">May 2019</h1>
+                              </div>
+                               <div class="col-lg-3">
+                             
+                              </div>
+                          </div>
+                         
+                      </div>
+      <!--WEEKLY VIEW-->     <div class="body" id="weekly">
+                                  <table id="resource-schedule-table"  class="tbl-monthly display nowrap" cellspacing="0">
+                                      <thead id="white">
+                                              <tr>
+                                                  <th id="r-b" style="background-color:white!important;"></th>
+                                                  <th class="th">Sunday</th>
+                                                  <th class="th">Monday</th>
+                                                  <th class="th">Tuesday</th>
+                                                  <th class="th">Wednesday</th>
+                                                  <th class="th">Thursday</th>
+                                                  <th class="th">Friday</th>
+                                                  <th class="th">Saturday</th>
+                                              </tr>
+                                        </thead>     
+                                      <thead>
+                                              <tr>
+                                                  <th class="th" height="50">Staff</th>
+                                                  <th class="th">May 5, 2019</th>
+                                                  <th class="th">May 6, 2019</th>
+                                                  <th class="th">May 7, 2019</th>
+                                                  <th class="th">May 8, 2019</th>
+                                                  <th class="th">May 9, 2019</th>
+                                                  <th class="th">May 10, 2019</th>
+                                                  <th class="th">May 11, 2019</th>
+                                              </tr>
+                                      </thead>
+                                      <!--End of table header-->
+                                          <tbody>
+                                              
+                                            <tr>
+                                                  <td class="resource-column">
+                                                    <img class="resource-image"  src="assets\images\lg\avatar1.jpg" style="width:70px;" align="left">
+                                                    <p class="resource-name">Alisha Jammer</p>
+                                                    <p class="resource-role">User Researcher</p>
+                                                    <p class="resource-office">Atlanta, GA</p>
+                                                  </td>
+                                                  <td class="rest-day">Rest Day</td>
+                                                  <!-- <td>
+                                                    <div class="commitment assigned">
+                                                      <span class="hours-meter half"></span>
+                                                      <p class="commitment-hours">4 Hours<p>
+                                                      <p class="commitment-type">NASCO - PMR Redesign<p>
+                                                    </div>
+                                                    <div class="commitment assigned">
+                                                      <span class="hours-meter half"></span>
+                                                      <p class="commitment-hours">4 Hours<p>
+                                                      <p class="commitment-type">NASCO - UX Strategy<p>
+                                                    </div>
+                                                  </td> -->
+                                                  <td>
+                                                    <div class="commitment assigned">
+                                                      <span class="hours-meter half"></span>
+                                                      <p class="commitment-hours">8:00-12:00 pm<p>
+                                                      <p class="commitment-type">Meeting Creative Department<p>
+                                                    </div>
+                                                    <div class="commitment assigned">
+                                                      <span class="hours-meter half"></span>
+                                                      <p class="commitment-hours">1:00-5:00 pm<p>
+                                                      <p class="commitment-type">Client Meeting<p>
+                                                    </div>
+                                                  </td>
+                                                  <td>
+                                                    <div class="commitment assigned">
+                                                      <span class="hours-meter half"></span>
+                                                      <p class="commitment-hours">8:00-5:00 pm<p>
+                                                      <p class="commitment-type">Regular Schedule<p>
+                                                    </div>
+                                                  </td>
+                                                  <td>
+                                                    <div class="commitment assigned">
+                                                      <span class="hours-meter full"></span>
+                                                      <p class="commitment-hours">8:00-5:00 pm<p>
+                                                        <p class="commitment-type">Regular Schedule<p>
+                                                    </div>
+                                                  </td>
+                                                  <td>
+                                                    <div class="commitment assigned">
+                                                      <span class="hours-meter full"></span>
+                                                      <p class="commitment-hours">8:00-5:00 pm<p>
+                                                        <p class="commitment-type">Regular Schedule<p>
+                                                    </div>
+                                                  </td>
+                                                  <td>
+                                                      <div class="commitment assigned">
+                                                        <span class="hours-meter full"></span>
+                                                        <p class="commitment-hours">8:00-5:00 pm<p>
+                                                          <p class="commitment-type">Regular Schedule<p>
+                                                      </div>
+                                                    </td>
+                                                    <td>
+                                                      <div class="commitment assigned">
+                                                        <span class="hours-meter full"></span>
+                                                        <p class="commitment-hours">8:00-5:00 pm<p>
+                                                          <p class="commitment-type">Regular Schedule<p>
+                                                      </div>
+                                                    </td>
+                                            <!--End of first column-->
+                                                <tr>
+                                                    <td class="resource-column">
+                                                      <img class="resource-image"  src="assets\images\lg\avatar2.jpg" style="width:70px;" align="left">
+                                                      <p class="resource-name">Brandon Thompson</p>
+                                                      <p class="resource-role">Project Manager</p>
+                                                      <p class="resource-office">Atlanta, GA</p>
+                                                    </td>
+                                                    <td class="rest-day">Rest Day</td>
+                                                    <td>
+                                                        <div class="commitment assigned">
+                                                          <span class="hours-meter full"></span>
+                                                          <p class="commitment-hours">8:00-5:00 pm<p>
+                                                            <p class="commitment-type">Regular Schedule<p>
+                                                        </div>
+                                                      </td>
+                                                    <td>
+                                                        <div class="commitment assigned">
+                                                          <span class="hours-meter full"></span>
+                                                          <p class="commitment-hours">8:00-5:00 pm<p>
+                                                            <p class="commitment-type">Regular Schedule<p>
+                                                        </div>
+                                                      </td>
+                                                    <td>
+                                                      <div class="commitment assigned">
+                                                        <span class="hours-meter full"></span>
+                                                        <p class="commitment-hours">8:00-5:00 pm<p>
+                                                          <p class="commitment-type">Regular Schedule<p>
+                                                      </div>
+                                                      <td>
+                                                      <div class="commitment assigned">
+                                                        <span class="hours-meter full"></span>
+                                                        <p class="commitment-hours">8:00-5:00 pm<p>
+                                                          <p class="commitment-type">Regular Schedule<p>
+                                                      </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="commitment assigned">
+                                                          <span class="hours-meter full"></span>
+                                                          <p class="commitment-hours">8:00-5:00 pm<p>
+                                                            <p class="commitment-type">Regular Schedule<p>
+                                                        </div>
+                                                      </td>
+                                                      <td>
+                                                        <div class="commitment assigned">
+                                                          <span class="hours-meter full"></span>
+                                                          <p class="commitment-hours">8:00-5:00 pm<p>
+                                                            <p class="commitment-type">Regular Schedule<p>
+                                                      </div>
+                                                </tr>
+                                            <!--End of second column-->
+                                                  <tr>
+                                                      <td class="resource-column">
+                                                        <img class="resource-image"  src="assets\images\lg\avatar4.jpg" style="width:70px;" align="left">
+                                                        <p class="resource-name">John Doe</p>
+                                                        <p class="resource-role">Senior Graphic Designer</p>
+                                                        <p class="resource-office">Atlanta, GA</p>
+                                                      </td>
+                                                      <td class="rest-day">Rest Day</td>
+                                                      <td></td>
+                                                      <td></td>
+                                                      <td></td>
+                                                      <td></td>
+                                                      <td></td>
+                                                      <td></td>
+                                                  </tr>
+                                              <tr>
+                                      <!--End of third column-->
+      
+                                                  <td class="resource-column">
+                                                    <img class="resource-image" src="assets\images\lg\avatar6.jpg" style="width:70px;" align="left">
+                                                    <p class="resource-name">John Smith</p>
+                                                    <p class="resource-role">Visual Designer</p>
+                                                    <p class="resource-office">Atlanta, GA</p>
+                                                  </td>
+                                                  <td class="rest-day">Rest Day</td>
+                                                  <td>
+                                                    <div class="commitment pto">
+                                                      <span class="hours-meter full"></span>
+                                                      <p class="commitment-hours">8:00-5:00 pm<p>
+                                                        <p class="commitment-type">Regular Schedule<p>
+                                                    </div>
+                                                  </td>
+                                                  <td>
+                                                    <div class="commitment pto">
+                                                      <span class="hours-meter full"></span>
+                                                      <p class="commitment-hours">8:00-5:00 pm<p>
+                                                        <p class="commitment-type">Regular Schedule<p>
+                                                    </div>
+                                                  </td>
+                                                  <td>
+                                                    <div class="commitment pto">
+                                                      <span class="hours-meter full"></span>
+                                                      <p class="commitment-hours">8:00-5:00 pm<p>
+                                                        <p class="commitment-type">Regular Schedule<p>
+                                                    </div>
+                                                  </td>
+                                                  <td>
+                                                    <div class="commitment pto">
+                                                      <span class="hours-meter full"></span>
+                                                      <p class="commitment-hours">8:00-5:00 pm<p>
+                                                        <p class="commitment-type">Regular Schedule<p>
+                                                    </div>
+                                                  </td>
+                                                  <td>
+                                                    <div class="commitment pto">
+                                                      <span class="hours-meter full"></span>
+                                                      <p class="commitment-hours">8:00-5:00 pm<p>
+                                                        <p class="commitment-type">Regular Schedule<p>
+                                                    </div>
+                                                  </td>
+                                                  <td>
+                                                    <div class="commitment pto">
+                                                      <span class="hours-meter full"></span>
+                                                      <p class="commitment-hours">8:00-5:00 pm<p>
+                                                        <p class="commitment-type">Regular Schedule<p>
+                                                    </div>
+                                                  </td>
+                                              <!--End of fourth column-->
+                                            <tr>
+                                                  <td class="resource-column">
+                                                      <img class="resource-image"  src="assets\images\lg\avatar3.jpg" style="width:70px;" align="left">
+                                                      <p class="resource-name">Tyler Durden</p>
+                                                      <p class="resource-role">Content Strategist</p>
+                                                      <p class="resource-office">Atlanta, GA</p>
+                                                  </td>
+                                                  <td class="rest-day">Rest Day</td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td>
+                                                    <div class="commitment assigned">
+                                                        <span class="hours-meter half"></span>
+                                                        <p class="commitment-hours">7:00 am-12:00 pm<p>
+                                                        <p class="commitment-type">Seminar<p>
+                                                    </div>
+                                                    <div class="commitment assigned">
+                                                        <span class="hours-meter quarter"></span>
+                                                        <p class="commitment-hours">1:00-3:00 pm<p>
+                                                        <p class="commitment-type">Team Meeting<p>
+                                                    </div>
+                                                    <div class="commitment assigned">
+                                                        <span class="hours-meter quarter"></span>
+                                                        <p class="commitment-hours">3:00-5:00 pm<p>
+                                                        <p class="commitment-type">Client Meeting<p>
+                                                    </div>
+                                                  </td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                              </tr>
+                                          <!--End of fourth column-->   
+                                          </tbody>
+                                      </table>
+                                    <!--End of table-->   
+                                <div class="float-right" style="padding-top:50px;">
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite">Showing 1 to 5 of 60 entries</div>
+                                        </div>
+                                        <div class="col-sm">
+                                            <div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate">
+                                                <ul class="pagination"><li class="paginate_button page-item previous disabled" id="DataTables_Table_0_previous">
+                                                    <a href="#" aria-controls="DataTables_Table_0" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li><li class="paginate_button page-item active">
+                                                    <a href="#" aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item ">
+                                                    <a href="#" aria-controls="DataTables_Table_0" data-dt-idx="2" tabindex="0" class="page-link">2</a></li><li class="paginate_button page-item ">
+                                                    <a href="#" aria-controls="DataTables_Table_0" data-dt-idx="3" tabindex="0" class="page-link">3</a></li><li class="paginate_button page-item ">
+                                                    <a href="#" aria-controls="DataTables_Table_0" data-dt-idx="4" tabindex="0" class="page-link">4</a></li><li class="paginate_button page-item ">
+                                                    <a href="#" aria-controls="DataTables_Table_0" data-dt-idx="5" tabindex="0" class="page-link">5</a></li><li class="paginate_button page-item ">
+                                                      <li class="paginate_button page-item next" id="DataTables_Table_0_next">
+                                                    <a href="#" aria-controls="DataTables_Table_0" data-dt-idx="7" tabindex="0" class="page-link">Next</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                          
+               </div> <!--END OF CARD-->
+              </div>
+        </div>
+        <!--Mpnthly tab-->
+        <div role="tabpanel" class="tab-pane" id="month-table"> 
+            <div class="container-fluid">
+              <div class="row" style="margin-right:0;">
+            <!--search card starts here-->
+            <div class="col-sm-3" >
+                <div class="card">
+                    <div class="card-header" style="background-color: #5d9cc8;">
+                        <h1 style="text-align:center;font-size: 14px;color:#fff; margin-bottom: 0;" >Staff</h1>
+                    </div>
+                    <div class="card-header" style="background-color:#f2f7fa; padding-bottom:5px;">
+                      <div class="input-group">
+                        <input id="myInput" onkeyup="myFunction()"class="form-control" style="background-color:white;" placeholder="Search..." type="text">
+                        <span class="input-group-addon" style="background-color:white;"><i class="zmdi zmdi-search" style="color:#5d9cc8;"></i></span>
+                      </div>  
+                    </div> 
+                    <div class="card-body" style="padding: 0.25rem">
+                        <div class="table-responsive members_profiles table-wrapper-scroll-y my-custom-scrollbar" style="padding-top:0">
+                            <table id="myTable" class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <!-- <th style="width:80px;">Image</th>
+                                        <th>Name</th> -->
+                                        <!-- <th>User ID</th> -->
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                      <td>
+                                          <img class="rounded" src="assets\images\lg\avatar1.jpg" alt="user" width="40"> </td>
+                                      <td>
+                                          <b>Alisha Jammer</b> <br>
+                                          <small>User Researcher</small>
+                                      </td>
+                                      <!-- <td>001-000-111</td>                                  -->
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                        <img class="rounded" src="assets\images\lg\avatar2.jpg" alt="user" width="40"> </td>
+                                    <td>
+                                        <b>Brandon Thompson</b> <br>
+                                        <small>Project Manager</small>
+                                    </td>
+                                    <!-- <td>001-000-112</td>                                  -->
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <img class="rounded"  src="assets\images\lg\avatar4.jpg" alt="user" width="40"> </td>
+                                      <td>
+                                        <b>John Doe</b> <br>
+                                        <small>Senior Graphic Designer</small>
+                                      </td>
+                                      <!-- <td>001-000-131</td>                                  -->
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <img class="rounded" src="assets\images\lg\avatar6.jpg" alt="user" width="40"> </td>
+                                      <td>
+                                        <b>John Smith</b> <br>
+                                        <small>Visual Designer</small>
+                                      </td>
+                                      <!-- <td>001-000-321</td>                                  -->
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <img class="rounded" src="assets\images\lg\avatar3.jpg" alt="user" width="40"> </td>
+                                      <td>
+                                        <b>Tyler Durden</b> <br>
+                                        <small>Content Strategist</small>
+                                      </td>
+                                      <!-- <td>001-000-311</td>                                  -->
+                                  </tr>
+                            
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+               </div>
+            </div>
+                  <div class="col-lg-9" style="padding-top: 0;">
+               
+                      <div id="calendar" style="max-width:unset!"></div> 
+                   
+                  </div>
+              </div>
+            </div>
+        </div>
+        <!--Cut off tab-->
+        <!-- <div role="tabpanel" class="tab-pane" id="cut-off-table">
+       
+        </div> -->
+    </div>
+            <!-- <button class="btn btn-default btn-simple btn-round waves-effect" id="change-view-day">Day</button> -->
+            <!-- <button class="btn btn-default btn-simple btn-round waves-effect" id="change-view-week">Week</button>
+            <button class="btn btn-default btn-simple btn-round waves-effect" id="change-view-month">Month</button>
+            <button class="btn btn-default btn-simple btn-round waves-effect" id="change-view-cutoff">Cut Off</button>
+            <div class="timezone font-weight-bold">Asia/Manila</div> -->
+            <!-- <div class="col-9" style="margin-left: auto; margin-right: auto;">
+              <div class="col-lg-12" style="text-align: center; margin-top: 15px;">
+                <div class="col-3" style="display: inline-block;"><div><div style="height: 15px; width: 15px; background-color: #61CED1; border-radius: 10%;"></div><span class="absolute_position" style="display: inline-block; font-weight: bold; color: #676767; font-size: 10px;">Shift</span></div></div>
+                <div class="col-3" style="display: inline-block;"><div><div style="height: 15px; width: 15px; background-color: #FFB235; border-radius: 10%;"></div><span class="absolute_position" style="display: inline-block; font-weight: bold; color: #676767; font-size: 10px;">On Leave</span></div></div>
+                <div class="col-3" style="display: inline-block;"><div><div style="height: 15px; width: 15px; background-color: #DC5682; border-radius: 10%;"></div><span class="absolute_position" style="display: inline-block; font-weight: bold; color: #676767; font-size: 10px;">Holiday</span></div></div>
+                <div class="col-3" style="display: inline-block;"><div><div style="height: 15px; width: 15px; background-color: #DDE5EA; border-radius: 10%;"></div><span class="absolute_position" style="display: inline-block; font-weight: bold; color: #676767; font-size: 10px;">Rest Day</span></div></div>
+              </div>
+            </div> -->
+           
+            <!--<div class="legend-wrapper w-80 margin0auto text-center">
+              <div class="inline-block legend">
+                <span class="legend-inner shift"></span>
+                <span class="type">Shift</span>
+              </div>
+              <div class="inline-block legend">
+                <span class="legend-inner leave"></span>
+                <span class="type">On Leave</span>
+              </div>
+              <div class="inline-block legend">
+                <span class="legend-inner holiday"></span>
+                <span class="type">Holiday</span>
+              </div>
+              <div class="inline-block legend">
+                <span class="legend-inner rest"></span>
+                <span class="type">Rest Day</span>
+              </div>
+            </div>-->
+            <!-- <div id="calendar" class="m-t-20 position-relative">
+              <button class="btn btn-primary btn-round waves-effect btn-today position-absolute" id="change-view-today">today</button>
+              <div id="loader" class="text-center" *ngIf="!isTrue">
+                <img src="../../assets/images/loader.gif" class="gif" />
+              </div>
+            </div> -->
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-12 col-lg-4 col-xl-4">
+        <!-- Filings -->
+        <!-- <div class="card">
+          <div style="height: 350px;" class="body">
+            <div style="width: 100%">
+              <span style="display: inline-block; color: #000; width: 50%;" class="event-header font-weight-bold">Filings Status</span>
+              <div style="display: inline-block; text-align: right; width: 30%">
+                <select id ="filingsDropDown">
+                  <option value=""></option>
+                  <option value="leaveRequest">File my Leave</option>
+                  <option value="otRequest">File my OT</option>
+                  <option value="logeditRequest">Log Edit</option>
+                  <option value="swapSchedRequest">Swap my Sched</option>
+                  <option value="obRequest">Official Business</option>
+                  <option value="changeSchedRequest">Change my Shift</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="filings_container"  style="margin-top: 20px;">
+              <div class="filings col-12 clearfix">
+                  <div style="width: 100%;">
+                    <div class="status_box pending"> Pending </div>
+                      <div class="leave_type"> Vacation Leave </div>
+                      <div class="time_container">
+                        <div> Whole Day </div>
+                        <div> 1/5/2019 - 1/5/2019 </div>
+                      </div>
+                </div>
+              </div>
+
+              <div class="filings_container">
+                <div class="filings col-12 clearfix">
+                  <div style="width: 100%;">
+                    <div class="status_box approved"> Approved </div>
+                    <div class="leave_type"> Change Shift </div>
+                    <div class="time_container">
+                      <div> Whole Day </div>
+                      <div> 1/5/2019 - 1/5/2019 </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="filings_container">
+                <div class="filings col-12 clearfix">
+                  <div style="width: 100%;">
+                    <div class="status_box declined"> Declined </div>
+                    <div class="leave_type"> Log Edit </div>
+                    <div class="time_container">
+                      <div> Whole Day </div>
+                      <div> 1/5/2019 - 1/5/2019 </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> 
+
+            <div style="width: 100%;  text-align: right;">
+              <span style="position: absolute; bottom: 10px; right: 10px;"><button style="background-color: #2F384E; border-color: #2F384E;" id="btnViewMore" (click)="viewFilingData()" class="btn btn-default btn-simple btn-round waves-effect">View More</button></span>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- UP COMING EVENT-->
+
+        <!-- <div class="card">
+          <div style="overflow:scroll; overflow-x: hidden; height: 400px;" class="body">
+            <button type="button" class="btn btn-round btn-info waves-effect" data-toggle="modal" data-target="#addevent">Add Events</button>
+            <button class="btn btn-default hidden-lg-up m-t-0 float-right" data-toggle="collapse" data-target="#open-events" aria-expanded="false" aria-controls="collapseExample"><i class="zmdi zmdi-chevron-down"></i></button>
+            <div class="event-header font-weight-bold">Upcoming Holidays/Events</div>
+            <hr>
+            <div style="overflow: scroll; overflow-x: hidden; height: 300px;" class="collapse-xs collapse-sm collapse" id="open-events">
+
+              <div class="event-name b-primary row">
+                <div class="col-3 text-center">
+                  <h4>11<span>Dec</span><span>2017</span></h4>
+                </div>
+                <div class="col-9">
+                  <h6>Conference</h6>
+                  <p>It is a long established fact that a reader will be distracted</p>
+                  <address><i class="zmdi zmdi-pin"></i> 123 6th St. Melbourne, FL 32904</address>
+                </div>
+              </div>
+              <div class="event-name b-primary row">
+                <div class="col-3 text-center">
+                  <h4>13<span>Dec</span><span>2017</span></h4>
+                </div>
+                <div class="col-9">
+                  <h6>Birthday</h6>
+                  <p>It is a long established fact that a reader will be distracted</p>
+                  <address><i class="zmdi zmdi-pin"></i> 123 6th St. Melbourne, FL 32904</address>
+                </div>
+              </div>
+              <hr>
+              <div class="event-name b-lightred row">
+                <div class="col-3 text-center">
+                  <h4>03<span>Dec</span><span>2017</span></h4>
+                </div>
+                <div class="col-9">
+                  <h6>Repeating Event</h6>
+                  <p>It is a long established fact that a reader will be distracted</p>
+                  <address><i class="zmdi zmdi-pin"></i> 123 6th St. Melbourne, FL 32904</address>
+                </div>
+              </div>
+              <hr>
+              <div class="event-name b-greensea row">
+                <div class="col-3 text-center">
+                  <h4>16<span>Dec</span><span>2017</span></h4>
+                </div>
+                <div class="col-9">
+                  <h6>Repeating Event</h6>
+                  <p>It is a long established fact that a reader will be distracted</p>
+                  <address><i class="zmdi zmdi-pin"></i> 123 6th St. Melbourne, FL 32904</address>
+                </div>
+              </div>
+              <div class="event-name b-greensea row">
+                <div class="col-3 text-center">
+                  <h4>28<span>Dec</span><span>2017</span></h4>
+                </div>
+                <div class="col-9">
+                  <h6>Google</h6>
+                  <p>It is a long established fact that a reader will be distracted</p>
+                  <address><i class="zmdi zmdi-pin"></i> 123 6th St. Melbourne, FL 32904</address>
+                </div>
+              </div>
+            </div>
+            <hr />
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+</section>
+<!--My custom Modal-->
+<div class="modal fade" id="event-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+          <div class="modal-header" style="background-color: #5d9cc8; padding-top: 30px;">
+            <h5 class="modal-title" id="exampleModalLabel" style="color:white;font-size:18px;padding-bottom: 20px;"><strong>Upcoming Holidays/Events</strong></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+    
+      <div class="modal-body" style="height: 550px;padding-top:20px;">
+        <div class="card">
+          <div style="overflow:scroll; overflow-x: hidden; height: 500px;" class="body">
+            <button type="button" class="btn btn-round btn-info waves-effect" data-toggle="modal" data-target="#addevent">Add Events</button>
+            <button class="btn btn-default hidden-lg-up m-t-0 float-right" data-toggle="collapse" data-target="#open-events" aria-expanded="false" aria-controls="collapseExample" style="padding: 5px 12px; background-color:#5d9cc8;"><i class="zmdi zmdi-chevron-down"></i></button>
+            <hr>
+            <div style="overflow: scroll; overflow-x: hidden; height: 300px;" class="collapse-xs collapse-sm collapse" id="open-events">
+      
+              <div class="event-name b-primary row">
+                <div class="col-3 text-center">
+                  <h4>11<span>Dec</span><span>2017</span></h4>
+                </div>
+                <div class="col-9">
+                  <h6>Conference</h6>
+                  <p>It is a long established fact that a reader will be distracted</p>
+                  <address><i class="zmdi zmdi-pin"></i> 123 6th St. Melbourne, FL 32904</address>
+                </div>
+              </div>
+              <div class="event-name b-primary row">
+                <div class="col-3 text-center">
+                  <h4>13<span>Dec</span><span>2017</span></h4>
+                </div>
+                <div class="col-9">
+                  <h6>Birthday</h6>
+                  <p>It is a long established fact that a reader will be distracted</p>
+                  <address><i class="zmdi zmdi-pin"></i> 123 6th St. Melbourne, FL 32904</address>
+                </div>
+              </div>
+              <hr>
+              <div class="event-name b-lightred row">
+                <div class="col-3 text-center">
+                  <h4>03<span>Dec</span><span>2017</span></h4>
+                </div>
+                <div class="col-9">
+                  <h6>Repeating Event</h6>
+                  <p>It is a long established fact that a reader will be distracted</p>
+                  <address><i class="zmdi zmdi-pin"></i> 123 6th St. Melbourne, FL 32904</address>
+                </div>
+              </div>
+              <hr>
+              <div class="event-name b-greensea row">
+                <div class="col-3 text-center">
+                  <h4>16<span>Dec</span><span>2017</span></h4>
+                </div>
+                <div class="col-9">
+                  <h6>Repeating Event</h6>
+                  <p>It is a long established fact that a reader will be distracted</p>
+                  <address><i class="zmdi zmdi-pin"></i> 123 6th St. Melbourne, FL 32904</address>
+                </div>
+              </div>
+              <div class="event-name b-greensea row">
+                <div class="col-3 text-center">
+                  <h4>28<span>Dec</span><span>2017</span></h4>
+                </div>
+                <div class="col-9">
+                  <h6>Google</h6>
+                  <p>It is a long established fact that a reader will be distracted</p>
+                  <address><i class="zmdi zmdi-pin"></i> 123 6th St. Melbourne, FL 32904</address>
+                </div>
+              </div>
+            </div>
+            <hr />
+          </div>
+        
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
+    </div>
+  </div>
+</div>
+<!--End of My custom Modal-->
+
+
+
+
+
+<!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+
+        <div class="modal-header" style="background-image: linear-gradient(to bottom right, #325EF6, #7E64FA);">
+          <div class="col-12">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <p id="modalTitle" style="color: #fff; font-weight: bold; font-size: 18px;"></p>
+          </div>
+        </div>
+
+        <!--File My OT-->
+        <div class="modal-body" id="otModal">
+          <div class="col-12">
+            <span>Date Filed:</span>
+            <input type="text" class="form-control" id="currentDateOT">
+          </div><!--Date Filed-->
+          <hr style="margin: 15px 0 15px 0;"> <!--Line-->
+          <div class="col-12">
+            <span>Request Type:</span>
+            <select class="form-control">
+              <option value="premium">Premium</option>
+              <option value="time-off">Time-Off</option>
+            </select>
+          </div><!--Request Type-->
+          <div class="col-12" style="margin-top: 10px;">
+            <span>When:</span><br>
+            <div class="col-1" style="display: inline-block; width: 10px;"><span>Start:</span></div>
+
+            <div style="display: inline-block; margin-left: 46px;">
+              <div class="input-group">
+                <span class="input-group-addon" style="padding: 0px 0px 0px 15px !important;">
+                  <i class="zmdi zmdi-calendar zmdi-hc-lg zmdi-hc-fw"></i>
+                </span>
+                <input type="text" id="startDateOT" style="display: inline-block; padding: 0px; width: 90px;" class="form-control" placeholder="04/03/2019">
+              </div>
+            </div>
+            <span> - </span>
+            <input type="number" style="display: inline-block; width: 60px;" min="1" max="12" value="00" class="form-control">
+            <span> : </span>
+            <input type="number" style="display: inline-block; width: 60px;" min="1" max="59" value="00" class="form-control">
+            <select style="display: inline-block; height: 30px;" class="col-2 form-control">
+              <option value="AM">AM</option>
+              <option value="PM">PM</option>
+            </select>
+          </div><!--Modal Body When/Start-->
+          <div class="col-12" style="margin-top: 10px;">
+            <div class="col-1" style="display: inline-block; width: 10px;"><span>End:</span></div>
+            <div style="display: inline-block; margin-left: 46px;">
+              <div class="input-group">
+                <span class="input-group-addon" style="padding: 0px 0px 0px 15px !important;">
+                  <i class="zmdi zmdi-calendar zmdi-hc-lg zmdi-hc-fw"></i>
+                </span>
+                <input type="text" id="endDateOT" style="display: inline-block; padding: 0px; width: 90px;" class="form-control" placeholder="04/03/2019">
+              </div>
+            </div>
+            <span> - </span>
+            <input type="number" style="display: inline-block; width: 60px;" min="1" max="12" value="00" class="form-control">
+            <span> : </span>
+            <input type="number" style="display: inline-block; width: 60px;" min="1" max="59" value="00" class="form-control">
+            <select style="display: inline-block; height: 30px;" class="col-2 form-control">
+              <option value="AM">AM</option>
+              <option value="PM">PM</option>
+            </select>
+          </div><!--Modal Body End-->
+          <div class="col-12" style="margin-top: 10px;">
+            <span>Reason:</span>
+            <textarea cols="1" rows="3" class="form-control" placeholder="State your reason"></textarea>
+          </div>
+          <div class="col-12" style="margin-top: 10px;">
+            <span>Attachments:</span>
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" id="obFile" value="">
+              <label class="custom-file-label" for="obFile">Choose File</label>
+            </div>
+          </div>
+        </div><!--Modal Body OT-->
+
+        <!--Change My Shift-->
+        <div class="modal-body" id="shiftModal">
+          <div class="col-12">
+            <span>Date Filed:</span>
+            <input type="text" class="form-control" id="currentDateCS">
+          </div><!--Date Filed-->
+          <hr style="margin: 15px 0 15px 0;"> <!--Line-->
+          <div class="col-12">
+            <span>Request Type:</span>
+            <select class="form-control">
+              <option value="">Select New Schedule</option>
+            </select>
+          </div><!--Request Type-->
+          <div class="col-12" style="margin-top: 10px;">
+            <span>When:</span><br>
+            <div style="display: inline-block;">
+              <div class="input-group">
+                <span class="input-group-addon" style="padding: 0px 0px 0px 15px !important;">
+                  <i class="zmdi zmdi-calendar zmdi-hc-lg zmdi-hc-fw"></i>
+                </span>
+                <input type="text" id="startDateCS" style="display: inline-block; padding: 0px; width: 145px;" class="form-control" placeholder="04/03/2019">
+              </div>
+            </div>
+            <span style="margin: 0px 24px 0px 24px"> - </span>
+            <div style="display: inline-block;">
+              <div class="input-group">
+                <span class="input-group-addon" style="padding: 0px 0px 0px 15px !important;">
+                  <i class="zmdi zmdi-calendar zmdi-hc-lg zmdi-hc-fw"></i>
+                </span>
+                <input type="text" id="endDateCS" style="display: inline-block; padding: 0px; width: 145px;" class="form-control" placeholder="04/03/2019">
+              </div>
+            </div>
+          </div>
+          <div class="col-12" style="margin-top: 10px;">
+            <span>Reason:</span>
+            <textarea cols="1" rows="3" class="form-control" placeholder="State your reason"></textarea>
+          </div>
+          <div class="col-12" style="margin-top: 10px;">
+            <span>Attachments:</span>
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" id="obFile" value="">
+              <label class="custom-file-label" for="obFile">Choose File</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- OB MODAL -->
+        <div class="modal-body" id="obModal">
+          <div class="col-12">
+            <span>Date Filed:</span>
+            <input type="text" class="form-control" id="currentDateOB">
+          </div><!--Date Filed-->
+          <hr style="margin: 15px 0 15px 0;"> <!--Line-->
+          <div class="col-12" style="margin-top: 10px;">
+            <span>When:</span><br>
+            <div class="col-1" style="display: inline-block; width: 10px;"><span>Start:</span></div>
+
+            <div style="display: inline-block; margin-left: 46px;">
+              <div class="input-group">
+                <span class="input-group-addon" style="padding: 0px 0px 0px 15px !important;">
+                  <i class="zmdi zmdi-calendar zmdi-hc-lg zmdi-hc-fw"></i>
+                </span>
+                <input type="text" id="startDateOB" style="display: inline-block; padding: 0px; width: 90px;" class="form-control" placeholder="04/03/2019">
+              </div>
+            </div>
+            <span> - </span>
+            <input type="number" style="display: inline-block; width: 60px;" min="1" max="12" value="00" class="form-control">
+            <span> : </span>
+            <input type="number" style="display: inline-block; width: 60px;" min="1" max="59" value="00" class="form-control">
+            <select style="display: inline-block; height: 30px;" class="col-2 form-control">
+              <option value="AM">AM</option>
+              <option value="PM">PM</option>
+            </select>
+          </div><!--Modal Body When/Start-->
+          <div class="col-12" style="margin-top: 10px;">
+            <div class="col-1" style="display: inline-block; width: 10px;"><span>End:</span></div>
+            <div style="display: inline-block; margin-left: 46px;">
+              <div class="input-group">
+                <span class="input-group-addon" style="padding: 0px 0px 0px 15px !important;">
+                  <i class="zmdi zmdi-calendar zmdi-hc-lg zmdi-hc-fw"></i>
+                </span>
+                <input type="text" id="endDateOB" style="display: inline-block; padding: 0px; width: 90px;" class="form-control" placeholder="04/03/2019">
+              </div>
+            </div>
+            <span> - </span>
+            <input type="number" style="display: inline-block; width: 60px;" min="1" max="12" value="00" class="form-control">
+            <span> : </span>
+            <input type="number" style="display: inline-block; width: 60px;" min="1" max="59" value="00" class="form-control">
+            <select style="display: inline-block; height: 30px;" class="col-2 form-control">
+              <option value="AM">AM</option>
+              <option value="PM">PM</option>
+            </select>
+          </div><!--Modal Body End-->
+          <div class="col-12" style="margin-top: 10px;">
+            <span>Reason:</span>
+            <textarea cols="1" rows="3" class="form-control" placeholder="State your reason"></textarea>
+          </div>
+          <div class="col-12" style="margin-top: 10px;">
+            <span>Attachments:</span>
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" id="obFile" value="">
+              <label class="custom-file-label" for="obFile">Choose File</label>
+            </div>
+          </div>
+        </div>
+
+        <!--Log Edit-->
+        <div class="modal-body" id="logeditModal">
+          <div class="col-12">
+            <span>Date Filed:</span>
+            <input type="text" class="form-control" id="currentDateLogEdit">
+          </div><!--Date Filed-->
+          <hr style="margin: 15px 0 15px 0;"> <!--Line-->
+          <div class="col-12" style="margin-top: 10px;">
+            <span>Old Time Log:</span><br>
+            <div class="col-1" style="display: inline-block; width: 10px;"><span>In:</span></div>
+            <input type="number" style="display: inline-block; width: 70px; margin-left: 60px;" min="1" max="12" value="00" class="form-control">
+            <span> : </span>
+            <input type="number" style="display: inline-block; width: 70px;" min="1" max="59" value="00" class="form-control">
+            <select style="display: inline-block; height: 30px;" class="col-2 form-control">
+              <option value="AM">AM</option>
+              <option value="PM">PM</option>
+            </select>
+          </div>
+          <div class="col-12" style="margin-top: 10px;">
+            <div class="col-1" style="display: inline-block; width: 10px;"><span>Out:</span></div>
+            <input type="number" style="display: inline-block; width: 70px; margin-left: 60px;" min="1" max="12" value="00" class="form-control">
+            <span> : </span>
+            <input type="number" style="display: inline-block; width: 70px;" min="1" max="59" value="00" class="form-control">
+            <select style="display: inline-block; height: 30px;" class="col-2 form-control">
+              <option value="AM">AM</option>
+              <option value="PM">PM</option>
+            </select>
+          </div>
+           <div class="col-12" style="margin-top: 10px;">
+            <span>New Time Log:</span><br>
+            <div class="col-1" style="display: inline-block; width: 10px;"><span>In:</span></div>
+
+            <div style="display: inline-block; margin-left: 46px;">
+              <div class="input-group">
+                <span class="input-group-addon" style="padding: 0px 0px 0px 15px !important;">
+                  <i class="zmdi zmdi-calendar zmdi-hc-lg zmdi-hc-fw"></i>
+                </span>
+                <input type="text" id="startDateLogEdit" style="display: inline-block; padding: 0px; width: 90px;" class="form-control" placeholder="04/03/2019">
+              </div>
+            </div>
+            <span> - </span>
+            <input type="number" style="display: inline-block; width: 60px;" min="1" max="12" value="00" class="form-control">
+            <span> : </span>
+            <input type="number" style="display: inline-block; width: 60px;" min="1" max="59" value="00" class="form-control">
+            <select style="display: inline-block; height: 30px;" class="col-2 form-control">
+              <option value="AM">AM</option>
+              <option value="PM">PM</option>
+            </select>
+          </div><!--Modal Body When/Start-->
+          <div class="col-12" style="margin-top: 10px;">
+            <div class="col-1" style="display: inline-block; width: 10px;"><span>Out:</span></div>
+            <div style="display: inline-block; margin-left: 46px;">
+              <div class="input-group">
+                <span class="input-group-addon" style="padding: 0px 0px 0px 15px !important;">
+                  <i class="zmdi zmdi-calendar zmdi-hc-lg zmdi-hc-fw"></i>
+                </span>
+                <input type="text" id="endDateLogEdit" style="display: inline-block; padding: 0px; width: 90px;" class="form-control" placeholder="04/03/2019">
+              </div>
+            </div>
+            <span> - </span>
+            <input type="number" style="display: inline-block; width: 60px;" min="1" max="12" value="00" class="form-control">
+            <span> : </span>
+            <input type="number" style="display: inline-block; width: 60px;" min="1" max="59" value="00" class="form-control">
+            <select style="display: inline-block; height: 30px;" class="col-2 form-control">
+              <option value="AM">AM</option>
+              <option value="PM">PM</option>
+            </select>
+          </div><!--Modal Body End-->
+          <div class="col-12" style="margin-top: 10px;">
+            <span>Reason:</span>
+            <textarea cols="1" rows="3" class="form-control" placeholder="State your reason"></textarea>
+          </div>
+          <div class="col-12" style="margin-top: 10px;">
+            <span>Attachments:</span>
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" id="obFile" value="">
+              <label class="custom-file-label" for="obFile">Choose File</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- LEAVE FILINGS -->
+        <div class="modal-body" id="leaveModal">
+          <div class="col-12">
+            <span>Date Filed:</span>
+            <input type="text" class="form-control" id="currentDateLeave" name="txtCurrentDate">
+          </div><!--Date Filed-->
+          <hr style="margin: 15px 0 15px 0;"> <!--Line-->
+          <div class="col-12">
+            <span>Leave Name:</span>
+            <select name="selectLeaveName" class="form-control">
+              <option value="VL">Vacation Leave</option>
+            </select>
+          </div><!--Date Filed-->
+          <div class="col-12" style="margin-top: 10px;">
+            <span>Leave Type:</span>
+            <select name ="selectLeaveType" class="form-control">
+              <option value="1">Whole Day</option>
+              <option value="0.5">Half Day</option>
+            </select>
+          </div><!--Date Filed-->
+          <div class="col-12" style="margin-top: 10px;">
+            <span>When:</span><br>
+            <div style="display: inline-block;">
+              <div class="input-group">
+                <span class="input-group-addon" style="padding: 0px 0px 0px 15px !important;">
+                  <i class="zmdi zmdi-calendar zmdi-hc-lg zmdi-hc-fw"></i>
+                </span>
+                <input type="text" id="startDateLeave" name="txtDateFrom" style="display: inline-block; padding: 0px; width: 145px;" class="form-control" placeholder="04/03/2019">
+              </div>
+            </div>
+            <span style="margin: 0px 24px 0px 24px"> - </span>
+            <div style="display: inline-block;">
+              <div class="input-group">
+                <span class="input-group-addon" style="padding: 0px 0px 0px 15px !important;">
+                  <i class="zmdi zmdi-calendar zmdi-hc-lg zmdi-hc-fw"></i>
+                </span>
+                <input type="text" id="endDateLeave" name = "txtDateTo" style="display: inline-block; padding: 0px; width: 145px;" class="form-control" placeholder="04/03/2019">
+              </div>
+            </div>
+          </div>
+          <div class="col-12" style="margin-top: 10px;">
+            <span>Reason:</span>
+            <textarea cols="1" rows="3" class="form-control" placeholder="State your reason" name="reason"></textarea>
+          </div>
+          <div class="col-12" style="margin-top: 10px;">
+            <span>Attachments:</span>
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" id="obFile" value="">
+              <label class="custom-file-label" for="obFile">Choose File</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button (click)="saveData()" class="btn btn-default btn-simple btn-round waves-effect">Save</button>
+          <button class="btn btn-default btn-simple btn-round waves-effect" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- MODAL FOR LIST OF FILINGS -->
+<!-- Central Modal Small -->
+<div class="modal fade" id="modalFilings" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+
+  <!-- Change class .modal-sm to change the size of the modal -->
+  <div class="modal-dialog modal-lg" role="document">
+
+
+    <div class="modal-content">
+      <div class="modal-header lightblue_gradient" style="height: 100px;">
+        <h6><p style="color: white; font-weight: bold;"> Filings Status </p></h6>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+
+      </div><!-- MODAL HEADER -->
+
+      <div class="modal-body">
+        <div class="col-11 text-center" style="margin-left: auto; margin-right: auto; margin-top: -60px;">
+          <div class="card">  
+            <div class="body">
+              <div class="darkblue_gradient gradient_box">
+                <div><h5 style="margin: 0px;"><span style="color: white">3</span></h5></div>
+                <div><span style="color: white; font-weight: bold;">Pending</span></div>
+              </div>
+              <div class="green_gradient gradient_box">
+                <div><h5 style="margin: 0px;"><span style="color: white;">20</span></h5></div>
+                <div><span style="color: white; font-weight: bold;">Pending</span></div>
+              </div>
+              <div class="red_gradient gradient_box">
+                <div><h5 style="margin: 0px;"><span style="color: white;">5</span></h5></div>
+                <div><span style="color: white; font-weight: bold;">Declined</span></div>
+              </div>
+              <div class="yellow_gradient gradient_box">
+                <div><h5 style="margin: 0px;"><span style="color: white;">1</span></h5></div>
+                <div><span style="color: white; font-weight: bold;">Cancelled</span></div>
+              </div>
+            </div><!-- BODY -->
+          </div><!-- CARD -->
+        </div><!-- MODAL SIZE -->
+
+        <div class="col-11" style="margin-left: auto; margin-right: auto;">
+          <div>  
+            <select class="select2" id="leaveNameDropDown">
+              <option>Vacation Leave</option>
+            </select>
+            <select class="select2" id="categoryDropDown">
+              <option>Duration</option>
+            </select>
+            <select class="select2" id="statusDropDown">
+              <option>Pending</option>
+            </select>
+            <button style="float: right;" class="btn btn-default btn-simple btn-round waves-effect">New Request</button>
+          </div>
+
+          <div class="body">
+            <div class="table-responsive">
+              <table class="table m-b-0" id="filingsDataTable" role="grid" aria-describedby="filingsDataTableInfo">  
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Duration</th>
+                    <th>Date Filed</th>
+                    <th>Leave Date</th>
+                    <th>Status</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                  <tr>
+                    <td>Vaction Leave</td>
+                    <td>Whole Day</td>
+                    <td>3/22/2019</td>
+                    <td>3/22/2019</td>
+                    <td>Pending</td>
+                    <td>Eye Icon</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+              </ul>
+            </div><!-- RESPONSIVE -->
+          </div><!-- BODY -->
+        </div>
+      </div> <!-- MODAL BODY (FILINGS) -->
+
+      <div class="modal-footer">
+        
+      </div> <!-- MODAL FOOTER -->
+    </div><!-- MODAL CONTENT -->
+  </div><!-- MODAL DIALOG -->
+</div><!-- MODAL FADE -->

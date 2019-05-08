@@ -1,0 +1,4 @@
+@import "../../../assets/plugins/dropzone/dropzone.css";
+dropzone>.dropzone.dz-wrapper .dz-message {
+    min-height: 130px !important;
+}

@@ -1,0 +1,20 @@
+/*.digital-clock {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 220px;
+  height: 60px;
+  color: #212529;
+  /*border: 2px solid #999;
+  /*border-radius: 4px;
+  text-align: center;
+  font: 50px/60px 'DIGITAL', "Montserrat","Helvetica Neue",Arial,sans-serif;
+  background: linear-gradient(90deg, #000, #555);
+}*/
+agm-map {
+  height: inherit;
+  width: 100%;
+}

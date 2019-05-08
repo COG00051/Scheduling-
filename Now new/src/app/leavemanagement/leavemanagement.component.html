@@ -1,0 +1,431 @@
+<section class="content">
+  <div class="block-header">
+    <div class="row">
+      <div class="col-lg-12 col-md-10 col-sm-8">
+        
+      </div>
+    </div>
+  </div>
+  
+  <!-- KNOBS & LEAVE FILINGS -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-9" style="height: 403px; max-height: 403px; min-height: 403px;">
+        <!-- <div class="card"> -->
+          <div class="body">
+            <h6><span>Usage of Leave Balances</span></h6>
+
+            <div class="col-12" style="overflow: scroll; overflow-y: hidden; display: inline-block;" *ngFor="let credits of allLeaveCredits">
+              <div class="col-4 text-center" style="display: inline-block;">
+                <ul class="list-unstyled feeds_widget">
+                  <li style="background-color: white;">
+                    <div class="feeds-body">
+                      <h6 style="margin-bottom: 40px;"><span> Vacation Leave </span></h6>
+                      <div style="display: inline; width: 100px; height: 100px;">
+                        <input type="text" class="dial" data-skin="tron" value="{{ credits.available }}" data-width="100" data-max="{{ credits.earned }}" data-min="0" data-height="100" data-thickness="0.2" data-angleoffset="90" data-fgcolor="#5d9cc9"readonly="readonly">
+                      </div><!-- KNOB BODY -->
+      
+                      <div class="row clearfix m-t-30">
+                        <div class="col-1"><div style="width: 20px; height: 20px; background-color: #5d9cc9;"></div></div>
+                        <div class="col-7 text-left"><span>Available</span></div>
+                        <div class="col-3"><span> {{ credits.available }} </span></div>
+                      </div>
+
+                      <div class="row clearfix m-t-5">
+                        <div class="col-1"><div style="width: 20px; height: 20px; background-color: #eee;"></div></div>
+                        <div class="col-7 text-left"><span>Consumed</span></div>
+                        <div class="col-3"><span> {{ credits.used }}</span></div>
+                      </div>
+
+                      <div class="row clearfix m-t-5">
+                        <div class="col-1"><div style="width: 20px; height: 20px; background-color: #eee;"></div></div>
+                        <div class="col-7 text-left"><span>Carry Over</span></div>
+                        <div class="col-3"><span> {{ credits.carryOver }}</span></div>
+                      </div>
+
+                      <button class="btn btn-default btn-simple btn-round waves-effect m-t-30">More</button>
+
+                    </div><!-- FEED -->
+                  </li>
+                </ul><!-- FEEDS -->
+              </div><!-- FEEED SIZE -->
+
+              <div class="col-4 text-center" style="display: inline-block;">
+                <ul class="list-unstyled feeds_widget">
+                  <li style="background-color: white;">
+                    <div class="feeds-body">
+                      <h6 style="margin-bottom: 40px;"><span>Sick Leave</span></h6>
+                      <div style="display: inline; width: 100px; height: 100px;">
+                        <input type="text" class="dial" data-skin="tron" value="75" data-width="100" data-height="100" data-thickness="0.2" data-angleoffset="90" data-fgcolor="#FFB235" readonly="readonly">
+                      </div><!-- KNOB BODY -->
+
+                      <div class="row clearfix m-t-30">
+                        <div class="col-1"><div style="width: 20px; height: 20px; background-color: #FFB235;"></div></div>
+                        <div class="col-7 text-left"><span>Available</span></div>
+                        <div class="col-3"><span>7</span></div>
+                      </div>
+
+                      <div class="row clearfix m-t-5">
+                        <div class="col-1"><div style="width: 20px; height: 20px; background-color: #eee;"></div></div>
+                        <div class="col-7 text-left"><span>Consumed</span></div>
+                        <div class="col-3"><span>3</span></div>
+                      </div>
+
+                      <div class="row clearfix m-t-5">
+                        <div class="col-1"><div style="width: 20px; height: 20px; background-color: #eee;"></div></div>
+                        <div class="col-7 text-left"><span>Carry Over</span></div>
+                        <div class="col-3"><span>3</span></div>
+                      </div>
+
+                      <button class="btn btn-default btn-simple btn-round waves-effect m-t-30">More</button>
+
+                    </div><!-- FEED -->
+                  </li>
+                </ul><!-- FEEDS -->
+              </div><!-- FEEED SIZE -->
+
+              <div class="col-4 text-center" style="display: inline-block;">
+                <ul class="list-unstyled feeds_widget">
+                  <li style="background-color: white;">
+                    <div class="feeds-body">
+                      <h6 style="margin-bottom: 40px;"><span>Solo Parent Leave</span></h6>
+                      <div style=   "display: inline; width: 100px; height: 100px;">
+                        <input type="text" class="dial" data-skin="tron" value="0" data-width="100" data-height="100" data-thickness="0.2" data-angleoffset="90" data-fgcolor="#61ECD1" readonly="readonly">
+                      </div><!-- KNOB BODY -->
+
+                      <div class="row clearfix m-t-30">
+                        <div class="col-1"><div style="width: 20px; height: 20px; background-color: #61ECD1;"></div></div>
+                        <div class="col-7 text-left"><span>Available</span></div>
+                        <div class="col-3"><span>0</span></div>
+                      </div>
+
+                      <div class="row clearfix m-t-5">
+                        <div class="col-1"><div style="width: 20px; height: 20px; background-color: #eee;"></div></div>
+                        <div class="col-7 text-left"><span>Consumed</span></div>
+                        <div class="col-3"><span>5</span></div>
+                      </div>
+
+                      <div class="row clearfix m-t-5">
+                        <div class="col-1"><div style="width: 20px; height: 20px; background-color: #eee;"></div></div>
+                        <div class="col-7 text-left"><span>Carry Over</span></div>
+                        <div class="col-3"><span>5</span></div>
+                      </div>
+
+                      <button class="btn btn-default btn-simple btn-round waves-effect m-t-30">More</button>
+
+                    </div><!-- FEED -->
+                  </li>
+                </ul><!-- FEEDS -->
+              </div><!-- FEEED SIZE -->
+
+              <div class="col-4 text-center" style="display: inline-block; position: absolute;">
+                <ul class="list-unstyled feeds_widget">
+                  <li style="background-color: white;">
+                    <div class="feeds-body">
+                      <h6 style="margin-bottom: 40px;"><span>Emergency Leave</span></h6>
+                      <div style="display: inline; width: 100px; height: 100px;">
+                        <input type="text" class="dial" data-skin="tron" value="100" data-width="100" data-height="100" data-thickness="0.2" data-angleoffset="90" data-fgcolor="#DC5682" readonly="readonly">
+                      </div><!-- KNOB BODY -->
+
+                      <div class="row clearfix m-t-30">
+                        <div class="col-1"><div style="width: 20px; height: 20px; background-color: #DC5682"></div></div>
+                        <div class="col-7 text-left"><span>Available</span></div>
+                        <div class="col-3"><span>10</span></div>
+                      </div>
+
+                      <div class="row clearfix m-t-5">
+                        <div class="col-1"><div style="width: 20px; height: 20px; background-color: #eee;"></div></div>
+                        <div class="col-7 text-left"><span>Consumed</span></div>
+                        <div class="col-3"><span>0</span></div>
+                      </div>
+
+                      <div class="row clearfix m-t-5">
+                        <div class="col-1"><div style="width: 20px; height: 20px; background-color: #eee;"></div></div>
+                        <div class="col-7 text-left"><span>Carry Over</span></div>
+                        <div class="col-3"><span>0</span></div>
+                      </div>
+
+                      <button class="btn btn-default btn-simple btn-round waves-effect m-t-30">More</button>
+
+                    </div><!-- FEED -->
+                  </li>
+                </ul><!-- FEEDS -->
+              </div><!-- FEEED SIZE -->
+            </div>
+
+          </div><!-- BODY -->
+        <!-- </div> --><!-- CARD -->
+      </div><!--SIZE -->
+
+      <div class="col-3">
+        <div class="card">
+          <div class="body">
+            
+            <div style="height: 388px;">
+              <h6 class="m-b-15"><span>Leave Actions</span></h6>
+              <select id="leaveTypeDropDown" style="width: 100%;">
+                <option value="">-- Please Select --</option>
+                <option value="VL">Vacation Leave</option>
+                <option value="SL">Sick Leave</option>
+                <option value="SPL">Solo Parent Leave</option>
+                <option value="EL">Emergency Leave</option>
+              </select>
+            </div>
+          </div><!-- BODY -->
+        </div><!-- CARD -->
+      </div><!-- SIZE -->
+    </div><!-- ROW -->
+  </div><!-- CONTAINER -->
+
+  <!-- TABLE -->
+  <div class="container-fluid m-t-20">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="body">
+            <!-- TITLE -->
+            <h6><span class="m-b-30">List of Filings</span></h6>
+
+            <!-- NAVIGATION BAR -->
+            <ul class="nav nav-tabs padding-0">
+              <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#pending-view">Pending Filings</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#previous-view">Previous Filings</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#view-all">All</a>
+              </li>
+            </ul>
+
+            <div class="tab-content m-t-10">
+              <div class="tab-pane active" id="pending-view">
+                <div class="table-responsive m-t-15">
+                  <table class="table table-hover">
+                    <thead>
+                      <tr class="text-center">
+                        <th>DATE</th>
+                        <th class="text-center">LEAVE TYPE</th>
+                        <th class="text-center">STATUS</th>
+                        <th style="width: 300px;">REASON</th>
+                        <th class="text-center">APPROVER NAME</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let filings of allFilings">
+                        <td class="text-center">
+                          {{ filings.dateFiled }}
+                        </td>
+                        <td class="text-center">
+                          {{ filings.leaveName }}
+                        </td>
+                        <td class="text-center">
+                          <span class="badge badge-info">
+                            {{ filings.status }}
+                          </span>
+                        </td>
+                        <td class="text-justify">
+                          {{ filings.reason }}
+                        </td>
+                        <td class="text-center">
+                          Mr. George Ting
+                        </td>
+                        <td class="text-center">
+                          <button type="button" class="btn btn-danger btn-sm">
+                            <i class="zmdi zmdi-close-circle-o"></i>
+                          </button>
+                        </td><!-- TEXT-CENTER-->
+                      </tr>
+                    </tbody>
+                  </table>
+                </div><!-- TABLE RESPONSIVE -->
+              </div><!-- TAB PANE -->
+
+            <div class="tab-pane" id="view-all">
+              <div class="table-responsive m-t-15">
+                  <table class="table table-hover">
+                    <thead>
+                      <tr class="text-center">
+                        <th>DATE</th>
+                        <th class="text-center">LEAVE TYPE</th>
+                        <th class="text-center">STATUS</th>
+                        <th style="width: 300px;">REASON</th>
+                        <th class="text-center">APPROVER NAME</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="text-center">24 OCT, WED</td>
+                        <td class="text-center">Vacation Leave</td>
+                        <td class="text-center" ><span class="badge badge-success">Approved</span></td>
+                        <td class="text-justify">I will be off tomorrow as I planned to take a short break.</td>
+                        <td class="text-center">Mr. George Ting</td>
+                        <td class="text-center">
+                          <button type="button" class="btn btn-info btn-sm">
+                            <i class="zmdi zmdi-more-vert"></i>
+                          </button>
+                        </td><!-- TEXT-CENTER-->
+                      </tr>
+                      <tr>
+                        <td class="text-center">20 OCT, FRI</td>
+                        <td class="text-center">Sick Leave</td>
+                        <td class="text-center"><span class="badge badge-info">Pending</span></td>
+                        <td class="text-justify">Need to attend a wedding ceremony of my cousin and I my presence there is needed for all the week in Bangalore.</td>
+                        <td class="text-center">Mr. George Ting</td>
+                        <td class="text-center">
+                          <button type="button" class="btn btn-danger btn-sm">
+                            <i class="zmdi zmdi-close-circle-o"></i>
+                          </button>
+                        </td><!-- TEXT-CENTER-->
+                      </tr>
+                      <tr>
+                        <td class="text-center">01 NOV, MON</td>
+                        <td class="text-center">Vacation Leave</td>
+                        <td class="text-center"><span class="badge badge-danger">Rejected</span></td>
+                        <td class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</td>
+                        <td class="text-center">Mr. George Ting</td>
+                        <td class="text-center">
+                          <button type="button" class="btn btn-info btn-sm">
+                            <i class="zmdi zmdi-more-vert"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">25 DEC, MON</td>
+                        <td class="text-center">Vacation Leave</td>
+                        <td class="text-center"><span class="badge badge-warning">Cancelled</span></td>
+                        <td class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</td>
+                        <td class="text-center">Mr. George Ting</td>
+                        <td class="text-center">
+                          <button type="button" class="btn btn-info btn-sm">
+                            <i class="zmdi zmdi-more-vert"></i>
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div><!-- TABLE RESPONSIVE -->
+            </div>
+
+            <div class="tab-pane" id="previous-view">
+              <div class="table-responsive m-t-15">
+                  <table class="table table-hover">
+                    <thead>
+                      <tr class="text-center">
+                        <th>DATE</th>
+                        <th class="text-center">LEAVE TYPE</th>
+                        <th class="text-center">STATUS</th>
+                        <th style="width: 300px;">REASON</th>
+                        <th class="text-center">APPROVER NAME</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="text-center">24 OCT, WED</td>
+                        <td class="text-center">Vacation Leave</td>
+                        <td class="text-center" ><span class="badge badge-success">Approved</span></td>
+                        <td class="text-justify">I will be off tomorrow as I planned to take a short break.</td>
+                        <td class="text-center">Mr. George Ting</td>
+                        <td class="text-center">
+                          <button type="button" class="btn btn-info btn-sm">
+                            <i class="zmdi zmdi-more-vert"></i>
+                          </button>
+                        </td><!-- TEXT-CENTER-->
+                      </tr>
+                      <tr>
+                        <td class="text-center">01 NOV, MON</td>
+                        <td class="text-center">Vacation Leave</td>
+                        <td class="text-center"><span class="badge badge-danger">Rejected</span></td>
+                        <td class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</td>
+                        <td class="text-center">Mr. George Ting</td>
+                        <td class="text-center">
+                          <button type="button" class="btn btn-info btn-sm">
+                            <i class="zmdi zmdi-more-vert"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">25 DEC, MON</td>
+                        <td class="text-center">Vacation Leave</td>
+                        <td class="text-center"><span class="badge badge-warning">Cancelled</span></td>
+                        <td class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</td>
+                        <td class="text-center">Mr. George Ting</td>
+                        <td class="text-center">
+                          <button type="button" class="btn btn-info btn-sm">
+                            <i class="zmdi zmdi-more-vert"></i>
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div><!-- TABLE RESPONSIVE -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- CONTAINER FLUID -->
+
+</section><!-- SECTION -->
+
+<div class="modal fade" id="leaveFilingsModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+     
+      <!-- Modal Header -->
+      <div class="modal-header darkblue_gradient" style="background-color: black;">
+        <span class="modal-title">Vacation Leave</span>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+        
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div class="col-12">
+          <select id="leaveType2" style="width: 100%">
+            <option value="1">Whole Day</option>
+            <option value="0.5">Half Day</option>
+          </select>
+        </div>
+        <hr>
+        <div class="col-12">
+          <span class="m-r-20">From:</span>
+          <div style="display: inline-block;">
+            <div class="input-group">
+              <span class="input-group-addon" style="padding: 0px 0px 0px 15px !important;">
+                 <i class="zmdi zmdi-calendar zmdi-hc-lg zmdi-hc-fw"></i>
+              </span>
+              <input type="text" id="leaveStartDate" style="display: inline-block; padding: 0px;" class="form-control" placeholder="04/03/2019">
+            </div>
+          </div><br>
+          <span class="m-r-45">To:</span>
+          <div style="display: inline-block;">
+            <div class="input-group">
+              <span class="input-group-addon" style="padding: 0px 0px 0px 15px !important;">
+                 <i class="zmdi zmdi-calendar zmdi-hc-lg zmdi-hc-fw"></i>
+              </span>
+              <input type="text" id="leaveEndDate" style="display: inline-block; padding: 0px;" class="form-control" placeholder="04/03/2019">
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="col-12" style="margin-top: 10px;">
+            <span>Reason:</span>
+            <textarea id = "txtLeaveReason" cols="1" rows="3" class="form-control" placeholder="State your reason"></textarea>
+          </div>
+      </div>
+        
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" (click)="saveFiling()" class="btn btn-primary" data-dismiss="modal">Save</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+      </div>
+        
+    </div>
+  </div>
+</div>

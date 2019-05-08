@@ -1,0 +1,5 @@
+#features li,
+#documenter_cover li,
+#template li{ padding: 5px 0;}
+.sidebar .menu .list li:first-child a{ padding:14px 10px !important;}
+.sidebar .menu .list a{ padding:8px !important;}

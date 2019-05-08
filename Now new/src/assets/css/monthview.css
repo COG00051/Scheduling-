@@ -1,0 +1,114 @@
+/*added custom styles*/
+.th{
+  text-align:center;
+  border: 1px solid #dfdfdf;
+}
+/*end of custom styles*/
+html, body {
+    font-family: Helvetica, sans-serif;
+  }
+  #resource-schedule-table{
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+  }
+  #resource-schedule-table th {
+    font-size: 14px;
+  }
+  #resource-schedule-table tbody td:not(:first-child) {
+    padding: 0 !important;
+  }
+  #resource-schedule-table th, #resource-schedule-table td {
+    white-space: nowrap;
+    border: 1px solid #dfdfdf;
+  }
+  #resource-schedule-table th.sorting, #resource-schedule-table td.sorting {
+    background-color: #eaeaea;
+  }
+  #resource-schedule-table th:not(:first-child):not(.sorting), #resource-schedule-table td:not(:first-child):not(.sorting) {
+    background-color: #ffffff;
+  }
+
+  
+  .commitment {
+    border: 1px solid #dfdfdf;
+    border-radius: 3px;
+    font-size: 12px;
+    padding: 5px;
+    position: relative;
+    overflow: hidden;
+  }
+  .commitment.pto .hours-meter {
+    background-color: #5D9CC7;
+  }
+  .commitment.assigned .hours-meter {
+    background-color: #5D9CC7;
+  }
+  .commitment p {
+    margin: 0;
+    margin-bottom: 0.2em;
+  }
+  .commitment p.commitment-hours {
+    color: #555555;
+  }
+  .commitment p.commitment-type {
+    color: #898989;
+  }
+  
+  .hours-meter {
+    position: absolute;
+    display: block;
+    height: 3px;
+    top: 0;
+    left: 0;
+  }
+  .hours-meter.full {
+    width: 100%;
+  }
+  .hours-meter.half {
+    width: 50%;
+  }
+  .hours-meter.quarter {
+    width: 25%;
+  }
+  
+  .resource-column {
+    padding: 5px;
+    width: 100px;
+  }
+  .resource-column p {
+    margin: 0;
+    margin-bottom: 0.5em;
+    font-size: 14px;
+  }
+  .resource-column p.resource-name {
+    font-weight: bold;
+    color: #555555;
+  }
+  .resource-column p.resource-role {
+    color: #555555;
+  }
+  .resource-column p.resource-office {
+    color: #898989;
+  }
+  
+  .resource-image {
+    margin-right: 10px;
+  }
+  
+  .DTFC_LeftHeadWrapper {
+    background-color: #eaeaea;
+  }
+  
+  .DTFC_LeftBodyWrapper {
+    background-color: #f4f4f4;
+    overflow: hidden;
+  }
+  .DTFC_LeftBodyWrapper .DTFC_LeftBodyLiner {
+    overflow: hidden;
+  }
+/*   
+  table.dataTable.no-footer {
+    border: none !important;
+  }
+   */

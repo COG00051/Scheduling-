@@ -1,0 +1,223 @@
+<section class="content page-calendar">
+  <div class="block-header">
+    <div class="row">
+      <div class="col-lg-7 col-md-6 col-sm-12">
+        <h2>My Time Clock</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <!-- <div class="row" *ngIf="showWebcam">
+      <div class="col-6">
+        <webcam [height]="500" [width]="500" [trigger]="triggerObservable" (imageCapture)="handleImage($event)"
+     [videoOptions]="videoOptions" (initError)="handleInitError($event)"></webcam>
+        <br>
+        <div class="actionBtn" (click)="triggerSnapshot();" title="Take Picture">📸</div>
+      </div>
+      <div class="col-6">
+        <div class="snapshot" *ngIf="webcamImage">
+          <img [src]="webcamImage.imageAsDataUrl" />
+        </div>
+      </div>
+    </div> -->
+    <div class="row">
+      <div [ngClass]="[showWebcam ? 'col-5' : 'col-3']">
+        <div class="card">
+          <div class="body">
+            <div style="height: 306px;">
+              <h6><span>Time In / Out</span></h6>
+              <hr>
+              <div style="text-align: center; position: relative;">
+                <span> Monday, Jan. 28, 2019</span><br>
+                <div style="margin-top: 10px;">
+                    <webcam [trigger]="triggerObservable" (imageCapture)="handleImage($event)" *ngIf="showWebcam" [videoOptions]="videoOptions" (initError)="handleInitError($event)" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;" [width]="250" [height]="250"></webcam>
+                    <div>
+                      <span> Current Time: </span>
+                      <h2 style="margin-bottom: 0px;">
+                        <div class="digital-clock"></div>
+                        <div id="localtime" class="digital-clock-raw" hidden="hidden">00:00:00</div>
+                      </h2>
+                      <span> Asia/Manila  </span>
+                      <select name="timezone" id="select-tz">
+                        <option *ngFor="let timezone of timezones" value="{{ timezone.tz }}">{{ timezone.name }}</option>
+                      </select>
+                    </div>
+                  <!-- <div class="snapshot" *ngIf="webcamImage">
+                    <img src="data:image/jpeg;base64,{{ splitWebCamImage }}" />
+                  </div> -->
+                </div>
+                <div>
+                  <button class="btn btn-default btn-simple btn-round waves-effect" style="margin-top: 10px;" (click)="getLocation()" id="clockIn">Clock In</button>
+                </div>
+              </div><!-- TIME IN/OUT EVENT -->
+            </div>
+          </div><!-- BODY -->
+        </div><!-- CARD -->
+      </div> <!-- SIZE -->
+
+      <div [ngClass]="[showWebcam ? 'col-7' : 'col-9']">
+        <div class="card">
+          <div class="body">
+            <h6><span>Current Location</span></h6>
+            <div>
+              <div style="padding: 0px; border: solid 1px #DDE5EA; height: 270px; margin-top: 15px;" class="col-12">
+                <div style="position: relative; height: 40px; text-align: center; border-bottom: solid 1px #DDE5EA;">
+                  <div style="display: inline-block; margin-left: auto; margin-right: auto" class="relative_position">
+                    <div style="width: 15px; height: 15px; border-radius: 10%; background-color: #5d9cc9; display: inline-block;"></div>
+                    <span style="margin-left: 5px; margin-right: 5px;"></span>
+                    <div style="display:inline-block;">Clock in</div>
+                  </div>
+                  <span style="margin-left: 10px; margin-right: 10px;"></span>
+                  <div style="display: inline-block; margin-left: auto; margin-right: auto" class="relative_position">
+                    <div style="width: 15px; height: 15px; border-radius: 10%; background-color: #2F384E; display: inline-block;"></div>
+                    <span style="margin-left: 5px; margin-right: 5px;"></span>
+                    <div style="display:inline-block;">Clock out</div>
+                  </div>
+                </div>
+                <div class="col-8"  style="float: left; display:inline-block; height: 228px; padding: 0px;">
+                  <agm-map [zoom]="15" [longitude]="lng" [latitude]="lat">
+                    <agm-marker *ngFor="let location of locations" [longitude]="location.lng" [latitude]="location.lat" [iconUrl]="{ url: '../assets/images/PIN1.png', scaledSize: { width: 40, height: 40 } }">
+                    </agm-marker>
+                  </agm-map> 
+                </div>
+                <div style="border-left: solid 1px #DDE5EA; float: left; display: inline-block;  height: 228px;" class="clearfix col-4">
+                  <input type="text" id="local" />
+                  <input type="text" id="picture" />
+                  <input type="text" id="longitude">
+                  <input type="text" id="latitude">
+                  <input type="text" id="public">
+                  <input type="text" id="private">
+                  <!--<div >
+                    <div>
+                      <img src="../assets/images/PIN2 (CLOCKIN).png" style=" margin-top: 10px; height: 40px; width: 35px; float: left;">
+                    </div>
+                    <br>
+                    <div>
+                      <img src="../assets/images/menu-vert.png" style="height: 20px; width: 20px; float: left;">
+                    </div>
+                    <div>
+                      <img src="../assets/images/PIN3 (CLOCKOUT).png" style="height: 40px; width: 35px; float: left;">
+                    </div>
+                  </div>
+                  <div style="float: right; display: inline-block;">
+                    <span>Clock In</span>
+                    <hr>
+                    <span>Clock Out</span>
+                  </div>-->
+                </div><!-- RIGHT PANEL -->
+              </div><!-- BORDER DIV -->
+            </div><!-- CONTAINER DIV -->
+          </div><!-- BODY -->
+        </div><!-- CARD -->
+      </div><!-- SIZE -->
+    </div><!-- ROW -->
+  </div><!-- CONTAINER FLUID -->
+
+</section>
+
+
+  <!--><div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 col-lg-8 col-xl-8">
+        <div class="card">
+          <div class="header">
+            <h2><strong>Current</strong> Location</h2>
+            <ul class="header-dropdown">
+              <li class="dropdown">
+                <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
+                <ul class="dropdown-menu dropdown-menu-right">
+                  <li><a href="javascript:void(0);">Action</a></li>
+                  <li><a href="javascript:void(0);">Another action</a></li>
+                  <li><a href="javascript:void(0);">Something else</a></li>
+                </ul>
+              </li>
+              <li class="remove">
+                <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="body">
+            <!--<div id="gmap_markers" class="gmap"></div>
+            <agm-map [zoom]="15" [longitude]="lng" [latitude]="lat">
+              <agm-marker *ngFor="let location of locations" [longitude]="location.lng" [latitude]="location.lat" [iconUrl]="{ url: '../assets/images/PIN1.png', scaledSize: { width: 40, height: 40 } }">
+              </agm-marker>
+            </agm-map>
+            <div id="not-supported"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-12 col-lg-4 col-xl-4">
+        <div class="card tasks_report">
+          <div class="header">
+            <h2><strong>Time</strong> Clock</h2>
+            <ul class="header-dropdown">
+              <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
+                <ul class="dropdown-menu dropdown-menu-right slideUp">
+                  <li><a href="javascript:void(0);">2017 Year</a></li>
+                  <li><a href="javascript:void(0);">2016 Year</a></li>
+                  <li><a href="javascript:void(0);">2015 Year</a></li>
+                </ul>
+              </li>
+              <li class="remove">
+                <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="body text-center">
+            <h3 class="m-t-0 m-b-10"><div id="servertime" class="digital-clock">00:00:00</div></h3>
+            <h6 class="m-b-30">Server Time</h6>
+            <h3 class="m-t-0 m-b-10"><div id="localtime" class="digital-clock">00:00:00</div></h3>
+            <h6 class="m-b-30">Local Time Zone</h6>
+            <!--<input type="text" class="knob dial1" value="66" data-width="140" data-height="140" data-thickness="0.1" data-fgColor="#000" readonly>
+            <input type="text" id="local" />
+            <input type="text" id="server" />
+            <input type="text" id="longitude">
+            <input type="text" id="latitude">
+            <input type="text" id="public">
+            <input type="text" id="private">
+            <!--<input type="text" id="mac">
+            <button id="submit" class="btn btn-primary btn-round" (click)="getLocation()">
+              Time In
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Default Size 
+<div class="modal fade" id="addevent" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="title" id="defaultModalLabel">Add Event</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <div class="form-line">
+            <input type="number" class="form-control" placeholder="Event Date">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-line">
+            <input type="text" class="form-control" placeholder="Event Title">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-line">
+            <textarea class="form-control no-resize" placeholder="Event Description..."></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary btn-round waves-effect">Add</button>
+        <button type="button" class="btn btn-simple btn-round waves-effect" data-dismiss="modal">CLOSE</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+

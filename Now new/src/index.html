@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>empleyado: A Work-Life Tool...</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css" />
+  <link href="assets/plugins/fullcalendar/fullcalendar.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/plugins/jvectormap/jquery-jvectormap-2.0.3.min.css" />
+  <link rel="stylesheet" href="assets/plugins/morrisjs/morris.min.css" />
+  <link rel="stylesheet" href="assets/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css" />
+  <!-- Custom Css -->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/color_skins.css">
+  <!-- Select2 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+
+
+  <style>
+    .webcam-wrapper[_ngcontent-c2] video.mirrored[_ngcontent-c2] {
+      width: 100% !important;
+      height: 260px !important;
+    }
+  </style>
+
+</head>
+<body class="theme-blue">
+  <div class="page-loader-wrapper">
+    <div class="loader">
+      <div class="m-t-30"><img class="zmdi-hc-spin" src="images/500x500-01.svg" width="88" height="88" alt="empleyado"></div>
+      <p>&nbsp;</p>
+      <p>Preparing application...</p>
+      <p>Please wait...</p>
+    </div>
+  </div>
+  <app-root></app-root>
+  
+  <!-- Jquery Core Js -->
+  <script src="assets/bundles/libscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js ( jquery.v3.2.1, Bootstrap4 js) -->
+  <script src="assets/bundles/vendorscripts.bundle.js"></script> <!-- slimscroll, waves Scripts Plugin Js -->
+  <script src="assets/bundles/morrisscripts.bundle.js"></script><!-- Morris Plugin Js -->
+  <!--<script src="assets/bundles/jvectormap.bundle.js"></script>--> <!-- JVectorMap Plugin Js -->
+  <script src="assets/plugins/jvectormap/jquery-jvectormap-2.0.3.min.js"></script>
+  <script src="assets/bundles/knob.bundle.js"></script> <!-- Jquery Knob-->
+  
+  <!--NEW CALENDAR-->
+  <script src="assets/js/dataTables.fixedColumns.min.js"></script>
+
+  <!-- Page calendar -->
+  <script src="assets/bundles/fullcalendarscripts.bundle.js"></script>
+  <!-- Page inbox -->
+  <script src="assets/bundles/footable.bundle.js"></script>
+  <!-- Page rtl -->
+  <script src="assets/plugins/chartjs/Chart.bundle.min.js"></script> <!-- Chart Plugins Js -->
+  <!-- Page compose email -->
+  <script src="assets/plugins/ckeditor/ckeditor.js"></script> <!-- Ckeditor -->
+  <!-- Page dialoug -->
+  <script src="assets/plugins/sweetalert/sweetalert.min.js"></script>
+  <!-- Page notification -->
+  <script src="assets/plugins/bootstrap-notify/bootstrap-notify.js"></script>
+  <!-- Page Range sliders -->
+  <script src="assets/plugins/ion-rangeslider/js/ion.rangeSlider.js"></script> <!-- RangeSlider Plugin Js -->
+  <script src="assets/plugins/nestable/jquery.nestable.js"></script>
+  <!-- Page basic form elements -->
+  <script src="assets/plugins/momentjs/moment.js"></script>
+  <script src="assets/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
+  <!-- Page Advance form elements -->
+  <script src="assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script> <!-- Bootstrap Colorpicker Js -->
+  <script src="assets/plugins/jquery-inputmask/jquery.inputmask.bundle.js"></script> <!-- Input Mask Plugin Js -->
+  <script src="assets/plugins/multi-select/js/jquery.multi-select.js"></script> <!-- Multi Select Plugin Js -->
+  <script src="assets/plugins/jquery-spinner/js/jquery.spinner.js"></script> <!-- Jquery Spinner Plugin Js -->
+  <script src="assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script> <!-- Bootstrap Tags Input Plugin Js -->
+  <script src="assets/plugins/nouislider/nouislider.js"></script> <!-- noUISlider Plugin Js -->
+  <!-- Page Advance form validation -->
+  <script src="assets/plugins/jquery-validation/jquery.validate.js"></script> <!-- Jquery Validation Plugin Css -->
+  <script src="assets/plugins/jquery-steps/jquery.steps.js"></script> <!-- JQuery Steps Plugin Js -->
+  <!-- JQuery Nicescroll -->
+  <!--<script src="../node_modules/jquery.nicescroll/dist/jquery.nicescroll.min.js"></script>-->
+  <!-- Page Jquery DataTable -->
+  <script src="assets/bundles/datatablescripts.bundle.js"></script>
+  <script src="assets/plugins/jquery-datatable/buttons/dataTables.buttons.min.js"></script>
+  <script src="assets/plugins/jquery-datatable/buttons/buttons.bootstrap4.min.js"></script>
+  <script src="assets/plugins/jquery-datatable/buttons/buttons.colVis.min.js"></script>
+  <script src="assets/plugins/jquery-datatable/buttons/buttons.html5.min.js"></script>
+  <script src="assets/plugins/jquery-datatable/buttons/buttons.print.min.js"></script>
+  <!-- Page editable table -->
+  <script src="assets/plugins/editable-table/mindmup-editabletable.js"></script> <!-- Editable Table Plugin Js -->
+  <!-- Page footable -->
+  <script src="assets/bundles/footable.bundle.js"></script> <!-- Lib Scripts Plugin Js -->
+  <!-- Page flot chart -->
+  <script src="assets/bundles/flotchartsscripts.bundle.js"></script> <!-- flot charts Plugin Js -->
+  <!-- Page chartjs -->
+  <script src="assets/plugins/chartjs/Chart.bundle.js"></script> <!-- Chart Plugins Js -->
+  <script src="assets/plugins/chartjs/polar_area_chart.js"></script><!-- Polar Area Chart Js -->
+  <!-- Page google map -->
+  <!--<script src="https://maps.google.com/maps/api/js?v=3&sensor=false"></script>
+  <script src="assets/plugins/gmaps/gmaps.js"></script>-->
+  <!-- Page jvector map -->
+  <script src="assets/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+  <script src="assets/plugins/jvectormap/jquery-jvectormap-in-mill.js"></script><!-- India Map Js -->
+  <script src="assets/plugins/jvectormap/jquery-jvectormap-us-aea-en.js"></script><!-- USA Map Js -->
+  <script src="assets/plugins/jvectormap/jquery-jvectormap-uk-mill-en.js"></script><!-- UK Map Js -->
+  <script src="assets/plugins/jvectormap/jquery-jvectormap-au-mill.js"></script><!-- Australia Map Js -->
+  <!--<script src="assets/bundles/mainscripts.bundle.js"></script>-->
+  <script src="assets/js/admin.js"></script>
+  <!-- Select 2-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+
+  <script>
+
+    $(document).ready(function () {
+
+      var currentDate = new Date();
+      var fullYear = currentDate.toLocaleDateString();
+      var dayName = currentDate.getDay();
+      var getTime = currentDate.toLocaleTimeString();
+      var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+      var d = new Date(currentDate);
+      var dayName = days[d.getDay()];
+      var abbName;
+
+      $('#filingsDropDown').select2({
+        minimumResultsForSearch: Infinity,
+        placeholder: "New Request"
+      });
+
+      $('#leaveType2').select2({
+        minimumResultsForSearch: Infinity
+      })
+
+      $('#leaveTypeDropDown').select2({
+        minimumResultsForSearch: Infinity,
+        placeholder: "Select Leave Name"
+      })
+
+      $('#leaveNameDropDown').select2({
+        minimumResultsForSearch: Infinity
+      });
+
+      $('#categoryDropDown').select2({
+        minimumResultsForSearch: Infinity
+      });
+
+      $('#statusDropDown').select2({
+        minimumResultsForSearch: Infinity
+      });
+
+      $('#leaveTypeDropDown').change(function () {
+        if($(this).val() == 'VL'){
+          $("#leaveFilingsModal").modal('show');
+        }
+        else if($(this).val() == 'SL'){
+          $("#leaveFilingsModal").modal('show');
+        }
+      });//End Filings drop-down
+
+      $('#filingsDropDown').change(function () {
+
+        if (dayName == 'Monday') {
+          abbName = "Mon";
+        }
+        else if (dayName == 'Tuesday') {
+          abbName = "Tue";
+        }
+        else if (dayName == 'Wednesday') {
+          abbName = "Wed";
+        }
+        else if (dayName == 'Thursday') {
+          abbName = "Thurs";
+        }
+        else if (dayName == 'Friday') {
+          abbName = "Fri";
+        }
+
+        if ($(this).val() == 'otRequest') {
+          $('#exampleModal').modal('show');
+          $('#modalTitle').html('File My OT');
+          $('#otModal').show();
+          $('#shiftModal').hide();
+          $('#obModal').hide();
+          $('#logeditModal').hide();
+          $('#leaveModal').hide();
+          $('#currentDateOT').attr('value', abbName + ', ' + fullYear + ', ' + getTime);
+        }
+        else if ($(this).val() == 'changeSchedRequest') {
+          $('#exampleModal').modal('show');
+          $('#modalTitle').html('Change My Shift');
+          $('#otModal').hide();
+          $('#shiftModal').show();
+          $('#obModal').hide();
+          $('#logeditModal').hide();
+          $('#leaveModal').hide();
+          $('#currentDateCS').attr('value', abbName + ', ' + fullYear + ', ' + getTime);
+        }
+        else if ($(this).val() == 'obRequest') {
+          $('#exampleModal').modal('show');
+          $('#modalTitle').html('Official Business');
+          $('#otModal').hide();
+          $('#shiftModal').hide();
+          $('#obModal').show();
+          $('#logeditModal').hide();
+          $('#leaveModal').hide();
+          $('#currentDateOB').attr('value', abbName + ', ' + fullYear + ', ' + getTime);
+        }
+        else if ($(this).val() == 'logeditRequest') {
+          $('#exampleModal').modal('show');
+          $('#modalTitle').html('Log Edit Request');
+          $('#otModal').hide();
+          $('#shiftModal').hide();
+          $('#obModal').hide();
+          $('#logeditModal').show();
+          $('#leaveModal').hide();
+          $('#currentDateLogEdit').attr('value', abbName + ', ' + fullYear + ', ' + getTime);
+        }
+        else if ($(this).val() == 'leaveRequest') {
+          $('#exampleModal').modal('show');
+          $('#modalTitle').html('File My Leave');
+          $('#otModal').hide();
+          $('#shiftModal').hide();
+          $('#obModal').hide();
+          $('#logeditModal').hide();
+          $('#leaveModal').show();
+          $('#currentDateLeave').attr('value', fullYear);
+        }
+      });// Filings DropDown
+
+      $(function () {
+
+        $('#startDateOB').bootstrapMaterialDatePicker({
+          format: 'YYYY-MM-DD',
+          time: false
+        });
+
+        $('#endDateOB').bootstrapMaterialDatePicker({
+          format: 'YYYY-MM-DD',
+          time: false
+        });
+
+        $('#startDateLeave').bootstrapMaterialDatePicker({
+          format: 'YYYY-MM-DD',
+          time: false
+        });
+
+        $('#leaveStartDate').bootstrapMaterialDatePicker({
+          format: 'YYYY-MM-DD',
+          time: false
+        });
+
+        $('#leaveEndDate').bootstrapMaterialDatePicker({
+          format: 'YYYY-MM-DD',
+          time: false
+        });
+
+        $('#endDateLeave').bootstrapMaterialDatePicker({
+          format: 'YYYY-MM-DD',
+          time: false
+        });
+
+        $('#startDateOT').bootstrapMaterialDatePicker({
+          format: 'YYYY-MM-DD',
+          time: false
+        });
+
+        $('#endDateOT').bootstrapMaterialDatePicker({
+          format: 'YYYY-MM-DD',
+          time: false
+        });
+
+        $('#startDateLogEdit').bootstrapMaterialDatePicker({
+          format: 'YYYY-MM-DD',
+          time: false
+        });
+
+        $('#endDateLogEdit').bootstrapMaterialDatePicker({
+          format: 'YYYY-MM-DD',
+          time: false
+        });
+
+        $('#startDateCS').bootstrapMaterialDatePicker({
+          format: 'YYYY-MM-DD',
+          time: false
+        });
+
+        $('#endDateCS').bootstrapMaterialDatePicker({
+          format: 'YYYY-MM-DD',
+          time: false
+        });
+      });// datetimepicker Function
+
+      $("#btnViewMore").click(function (){
+        $("#modalFilings").modal('show');
+      });
+
+      $("#btnLeaveManagement").click(function (){
+        $("#leaveManagementModal").modal('show');
+      });
+
+      $(function() {
+        $(".dial").knob();
+      });
+    });// Document Ready
+  </script>
+
+<!-- My filter Function -->
+<!--filter Month -->
+<script>
+  function myFunction() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[1];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }       
+    }
+  }
+  </script>
+  <!--filter Week -->
+  <script>
+      function myFilter() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("input-week");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("resource-schedule-table");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[0];
+          if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
+          }       
+        }
+      }
+      </script>
+</body>
+</html>

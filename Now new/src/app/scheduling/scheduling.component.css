@@ -1,0 +1,167 @@
+/* @import "../../assets/plugins/fullcalendar/fullcalendar.min.css"; 
+@import url('../../assets/plugins/fullcalendar/fullcalendar.min.css'); */
+@import url('../../assets/css/monthview.css');
+/*custom css*/
+
+.calendar{
+  float: right;
+}
+.rest-day{
+  text-align: center;
+}
+.bg-light{
+  background-color: rgb(255, 255, 255)!important;
+}
+#white th{
+background-color:#f2f7fa;
+}
+
+#r-b{
+  border: none;
+  visibility: hidden;
+}
+.pagination .page-item.active > .page-link, .pagination .page-item.active > .page-link:focus, .pagination .page-item.active > .page-link:hover{
+  background-color:#5d9cc8;
+}
+.selected {
+  background-color: #f8f8f8;
+}
+/* .my-custom-scrollbar {
+  position: relative;
+  height: 100px;
+  overflow: auto;
+}
+.scrollbar-2 {
+  position: relative;
+  height: 300px;
+  overflow: auto;
+}
+.table-wrapper-scroll-y {
+  display: block;
+} */
+/*End of my custom css*/
+
+.center{
+  text-align: center;
+}
+.nav-tabs .nav-link.active {
+  border: 1px solid #5D9CC9 !important;
+  background: #5D9CC9;
+  color: #fff;
+  padding: 9px 21px;
+}
+
+.change-sked {
+  padding: 10px 30px;
+  font-size: 14px;
+}
+
+.title-sked {
+  margin-top: 15px !important;
+}
+
+.timezone {
+  display: inline;
+  text-align: right;
+  float: right;
+  margin: 15px 0px;
+}
+
+.event-header {
+  color: #5D9CC9;
+  font-size: 18px;
+}
+
+.position-relative {
+  position: relative !important;
+}
+
+.position-absolute {
+  position: absolute !important;
+}
+
+.btn-today {
+  top: 7px;
+  left: 90px;
+  background-color: #FFF !important;
+  color: #9FB8CE !important;
+  padding: 0px 20px !important;
+}
+
+.fc button {
+  height: 2.6em !important;
+}
+
+.waves-effect {
+  background-color: #5D9CC7;
+  color: #EEFDFF;
+  border-color: #5D9CC7;
+}
+
+.card {
+  display: block !important;
+}
+
+#loader {
+  position: absolute;
+  margin: 20px 0px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#loader .gif {
+  margin-top: -80px;
+  height: 35px;
+  width: auto;
+}
+
+/*.inline-block {
+  display: inline-block;
+}
+
+.margin0auto {
+  margin: 0 auto;
+}
+
+.w-80{
+  width: 80% !important;
+}
+
+.legend-wrapper .legend {
+  margin: 0px 10px;
+  width: 90px;
+}
+
+.legend-wrapper .legend .type {
+  
+}
+
+.legend-wrapper .legend .legend-inner {
+  float: left;
+  height: 15px;
+  width: 15px;
+  border-radius: 5px;
+  margin: 3px 5px 0px 0px;
+}
+
+.legend-wrapper .legend .shift {
+  background-color: #61CED1;
+}
+
+.legend-wrapper .legend .leave {
+  background-color: #FFB235;
+}
+
+.legend-wrapper .legend .holiday {
+  background-color: #DC5682;
+}
+
+.legend-wrapper .legend .rest {
+  background-color: #DDE5EA;
+}*/
+
+
+
+
